@@ -22,17 +22,17 @@ inputs:
   format:
     description: Evidence format, options=[statement attest]
   format-encoding:
-    description: Format encoding
+    description: Evidence Format encoding
   format-type:
-    description: Format type
+    description: Evidence Format type
   format-version:
-    description: Format version
+    description: Evidence Format version
   tool:
-    description: Tool name
+    description: Evidence Tool name
   tool-vendor:
-    description: Tool vendor
+    description: Evidence Tool vendor
   tool-version:
-    description: Tool version
+    description: Evidence Tool version
   allow-expired:
     description: Allow expired certs
   attest-config:
@@ -128,7 +128,7 @@ inputs:
     description: Log verbosity level [-v,--verbose=1] = info, [-vv,--verbose=2] = debug
 runs:
   using: docker
-  image: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint:v1.2.0
+  image: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint:v1.3.0
   args:
     - evidence
     - ${{ inputs.type }}${{ inputs.type && ':' }}${{ inputs.target }}
