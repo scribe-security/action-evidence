@@ -43,6 +43,8 @@ inputs:
     description: Select OCI custom attestation repo
   parser:
     description: Evidence Parser Name
+  pass:
+    description: Private key password
   pubkey:
     description: Public key path
   tool:
@@ -100,7 +102,7 @@ inputs:
     description: Log verbosity level [-v,--verbose=1] = info, [-vv,--verbose=2] = debug
 runs:
   using: docker
-  image: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint:v1.5.6
+  image: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint:v1.5.7
   args:
     - evidence
     - ${{ inputs.target }}
@@ -121,6 +123,7 @@ runs:
     - ${{ inputs.oci && '--oci=' }}${{ inputs.oci }}
     - ${{ inputs.oci-repo && '--oci-repo=' }}${{ inputs.oci-repo }}
     - ${{ inputs.parser && '--parser=' }}${{ inputs.parser }}
+    - ${{ inputs.pass && '--pass=' }}${{ inputs.pass }}
     - ${{ inputs.pubkey && '--pubkey=' }}${{ inputs.pubkey }}
     - ${{ inputs.tool && '--tool=' }}${{ inputs.tool }}
     - ${{ inputs.tool-vendor && '--tool-vendor=' }}${{ inputs.tool-vendor }}
