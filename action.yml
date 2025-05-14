@@ -66,7 +66,7 @@ inputs:
   gate:
     description: Policy Gate name
   input:
-    description: Input Evidence target, format (<parser>:<file> or <scheme>:<name>:<tag>)
+    description: Input Evidence target, format (\<parser>:\<file> or \<scheme>:\<name>:\<tag>)
   label:
     description: Add Custom labels
   level:
@@ -106,7 +106,7 @@ inputs:
     description: Log verbosity level [-v,--verbose=1] = info, [-vv,--verbose=2] = debug
 runs:
   using: docker
-  image: docker://scribesecurity/valint:v1.5.18
+  image: docker://scribesecurity/valint:v1.5.19
   args:
     - evidence
     - ${{ inputs.target }}
