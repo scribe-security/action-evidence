@@ -142,7 +142,7 @@ The `valint evidence` action is a versatile action designed to include various t
 Containerized action can be used on Linux runners as following
 ```yaml
 - name: Include evidence derived from a file
-  uses: scribe-security/action-evidence@v2.0.1
+  uses: scribe-security/action-evidence@v2.0.6
   with:
     target: some_file.json
 ```
@@ -150,7 +150,7 @@ Containerized action can be used on Linux runners as following
 Composite Action can be used on Linux or Windows runners as following
 ```yaml
 - name: Include evidence derived from a file
-  uses: scribe-security/action-evidence-cli@v2.0.1
+  uses: scribe-security/action-evidence-cli@v2.0.6
   with:
     target: some_file.json
 ```
@@ -636,7 +636,7 @@ Install Valint as a tool
 
 ### Alternative evidence stores
 
-> You can learn more about alternative stores **[here](https://scribe-security.netlify.app/docs/integrating-scribe/other-evidence-stores)**.
+> You can learn more about alternative stores **[here](https://scribe-security.github.io/docs/integrating-scribe/other-evidence-stores)**.
 
 <details>
   <summary> Alternative store OCI </summary>
